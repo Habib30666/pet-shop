@@ -1,0 +1,67 @@
+<!--Doctype lets the web know about the type of HTML its using, this allows it to load properly -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Online Pet Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link rel="stylesheet" href="cart.css">
+<script src="js/script.html"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark">
+<div class="container">
+    <!-- logo -->
+  <a class="navbar-brand" href="#">
+    <img src="images/mylogo.jpg" width="80" alt="" class="rounded-circle">
+  </a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../pets.html">See All Pets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cart.html">Purchase a Pet</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="../contact.html">Contact</a>
+      </li>
+
+
+    </ul>
+  </div>
+</div>
+</nav>
+    <div id="cart-wrap" style="margin-top: 60px">
+      <!-- (B) PRODUCTS LIST -->
+      <div id="cart-products"></div>
+
+      <!-- (C) CURRENT CART -->
+      <div id="cart-items"></div>
+    </div>
+
+
+<footer class="bg-dark">
+  <div class="container">
+  
+  </div>
+</footer>
+
+      <script src="pets prices.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
