@@ -1,31 +1,29 @@
+// DUMMY PRODUCTS (PRODUCT ID : DATA)
 var products = {
     123: {
-    
-        name : "Dogs",
-        desc : "",
-        img : "",
-        price : 120
-    
-     
-    
+      
+      
+      name : "DOG",
+      desc : "brown, black",
+      img : "dog2.jpg",
+      price : 40
     },
-    
-    123: {
-    
-        name : "Cats",
-        desc : "",
-        img : "",
-        price : 110
-    
-    
+    124: {
+      name : "CAT",
+      desc : "black, white,brown.",
+      img : "dog cat.jpg",
+      price : 150
     },
-    
-    123: {
-    
-        name : "Rabbits",
-        desc : "",
-        img : "",
-        price : 50
-    
+    125: {
+      name : "DOG",
+      desc : "different breed.",
+      img : "dogy.jpg",
+      price : 60
+    },
+    126: {
+      name : "RABBITS",
+      desc : "white and black ",
+      img : "rabbit1.jpg",
+      price : 85
     }
-    
+  };
