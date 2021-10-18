@@ -1,0 +1,83 @@
+<!--Doctype lets the web know about the type of HTML its using, this allows it to load properly -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Online Pet Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--code from boostrap 5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark">
+<div class="container">
+	  <!-- Brand -->
+  <a class="navbar-brand" href="#">
+  	<img src="images/mylogo.jpg" width="80" alt="" class="rounded-circle">
+  </a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- links on the navbar -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="pets.html">All Pets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="js-cart/cart.html">Purchase a Pet</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+                            <li class="nav-item ml-5">                          <!--this changes the  colour of the cart button-->
+        <a class="nav-link btn btn-dark" href="js-cart/cart.html" style="background: #0f9284;"><i class="fa fa-shopping-cart"></i>  Shopping cart</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<div class="container pets-row">
+  <h1 class="text-center mb-5"> PETS AVAILABLE</h1>
+  <div class="row mt-3">
+    <div class="col-md-3 ">
+      
+      <!--images contained within "all pets" link-->
+      <img src="images/dog cat.jpg" class="img-fluid" alt="">
+    </div>
+    
+    <div class="col-md-3">
+      <img src="images/dogy.jpg" class="img-fluid" alt="">
+    </div>
+    <div class="col-md-3">
+<img src="images/rabbit1.jpg" class="img-fluid" alt="">     
+    </div>
+  </div>
+
+    
+
+  <div class="text-center mt-5"><a href="js-cart/cart.html" class="btn btn-dark rounded-0 px-5 py-2">Purchase Now</a></div>
+</div>
+
+
+
+<footer class="bg-dark">
+  <div class="container">
+    
+  </div>
+</footer>
+
+  
+</body>
+</html>
