@@ -1,0 +1,68 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h1{
+	font-size: 30px;
+}
+.navbar{
+	     background: #2d3333;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255 255 255);
+    font-size: 20px;
+}
+
+.banner{
+	background: url('../images/banner.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 400px;
+	width: 2000px;
+	position: relative;
+}
+
+.banner-content{
+	z-index: 1;
+}
+.main_heading{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.main_heading h1{
+	font-size: 56px;
+	font-weight: bold;
+    color: #fff;
+}
+.main_heading p{
+	font-size: 30px;
+	font-weight: bold;
+    color: #fff;
+}
+.dogs{
+	margin-top: 100px;
+}
+.pets-row{
+	margin-top: 100px;
+}
+.pets-row img{
+	height: 240px;
+	transition: 0.3s;
+
+}
+.contact h1{
+	margin-top: 100px;
+}
+.contact .form-control{
+	margin-bottom: 20px;
+	border: 1px solid #000;
+}
+footer{
+	margin-top: 50px;
+	padding: 20px 0;
+}
