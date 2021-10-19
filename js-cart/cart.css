@@ -13,39 +13,40 @@
   #cart-items { width: 30%; }
   input.cart, button.cart {
     padding: 10px;
-    border: 0;
+    border: 0; /* changes the colour of the "add to cart" button an the also the seizing */
         background: #0f9284;
-    color: #fff;
+    color: #fff; /* this changes the colour of the text on the "add to cart" button */
     font-weight: 700;
     cursor: pointer;
   }
   
-  /* (B) PRODUCTS LIST */
+  /* the css for the list of pets in my js */
   #cart-products {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 10px;
   }
+  /* changes the colour for the border around the imgaes on the shopping cart  */
   .p-item {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(39, 3, 245);
     border-radius: 5px;
     text-align: center;
-  }
+  } /* this changes the colour of text and the size */
   .p-img { max-width: 150px; }
   .p-name, .p-price { font-weight: 700; }
   .p-name, .p-desc, .p-price { margin: 5px 0; }
   .p-name { text-transform: uppercase; }
   .p-desc {
-    color: #aaa;
+    color: rgb(35, 209, 166);
     font-size: 0.9em;
   }
   .p-price { font-size: 1.35em; }
   input.p-add { width: 70%; }
   
-  /* (C) CURRENT SHOPPING CART */
+  /* changes the colour of the cart column and the text displayed */
   #cart-items {
-    background: #31394d;
+    background: #0b1b44;
     color: #fff;
     border-radius: 5px;
   }
