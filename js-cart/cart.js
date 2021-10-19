@@ -146,7 +146,7 @@ var cart = {
       item = document.createElement("div");
       item.className = "c-total";
       item.id = "c-total";
-      item.innerHTML ="TOTAL: $" + total;
+      item.innerHTML ="TOTAL: £" + total;
       cart.hItems.appendChild(item);
 
       // EMPTY BUTTONS
