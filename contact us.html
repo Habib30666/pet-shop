@@ -12,7 +12,7 @@
   <script>
   // this is used for my validation box. it simply informs the user if they didnt write anything for exampele "name must be filled"
   function validateForm() {
-    let x = document.forms["hForm"]["fname"]["femail"]["fphone"]["fmessage"]      .value;
+    let x = document.forms["hForm"]["fname"]["femail"]["fphone"]["fmessage"].value;
     if (x == "") {
       alert("Name must be filled out");
       return false;
@@ -39,7 +39,7 @@
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           
-    <!-- these are the nav bar links for example the home, contacts page -->
+    <!-- these are the nav bar links for example the home, Contact us page -->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -47,13 +47,13 @@
       <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pets.html">All Pets</a>
+          <a class="nav-link" href="pets.html">Avaliable Pets</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="js-cart/cart.html">Purchase a Pet</a>
+          <a class="nav-link" href="js-cart/cart.html">Purchase</a>
         </li>
               <li class="nav-item">
-          <a class="nav-link" href="contacts.html">Contacts</a>
+          <a class="nav-link" href="contact us.html">Contact us</a>
         </li>
                         <li class="nav-item ml-5">
           <a class="nav-link btn btn-dark" href="js-cart/cart.html" style="background: #0f9284;"><i class="fa fa-shopping-cart"></i>  Shopping cart</a>
@@ -66,11 +66,11 @@
 
 
   
-  <h1 class="mb-5 text-center">CONTACT US</h1>
+  <h1 class="mb-5 text-center">Contact us</h1>
     <!--this creates a validation box for entering customer details e.g. name, emails--> 
   <form action="">
     <input type="text" name="" class="form-control rounded-0" placeholder="Name" name="fname" required></div>
-    <input type="text" name="" class="form-control rounded-0" placeholder="Email"  name="femail" required></div>
+    <input type="email" name="" class="form-control rounded-0" placeholder="Email"  name="femail" required></div>
     <input type="number" name="" class="form-control rounded-0" placeholder="Phone No" name="fphone" required="" ></div> <!--  type="number" only allows you to input numbers not text-->
     <textarea name="" id=""  rows="6" class="form-control" placeholder="Message"  name="fmessage" required> </textarea> </div> 
     <input type="submit" name="" class="btn btn-dark rounded-0 px-5" value="Submit">

@@ -8,6 +8,11 @@ h1{
 }
 .navbar{
 	     background: #2d3333;
+		 display: block;
+		 width: 100%;
+}
+.navitem {
+	width: 100%;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: rgb(255 255 255);
@@ -20,8 +25,10 @@ h1{
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 400px;
-	width: 2000px;
+	width: 100%;
 	position: relative;
+	margin:0;
+	padding: 0;
 }
 
 .banner-content{
@@ -63,6 +70,9 @@ h1{
 	border: 1px solid #000;
 }
 footer{
-	margin-top: 50px;
-	padding: 20px 0;
+	padding: 20px;
+	display: inline-block; 
+	color: white;
+	text-align: center;
+	width: 100%;
 }
