@@ -12,14 +12,14 @@ var cart = {
   },
 
   // this loads the cart within session storage
-  load : function () {
+  loadCart : function () {
     cart.items = sessionStorage.getItem("cart");
     if (cart.items == null) { cart.items = {}; }
     else { cart.items = JSON.parse(cart.items); }
   },
 
   // sets car.item it.
-  nuke : function () {
+  cancel: function () {
     if (confirm("Empty cart?")) {  // you click yes or no if you want to empty the cart
       cart.items = {}; // empties out the cart if there are items in it
     sessionStorage.removeItem("cart");
@@ -55,7 +55,7 @@ var cart = {
       part.className = "p-name";
       item.appendChild(part); 
 
-      // PRODUCT DESCRIPTION
+      //
       part = document.createElement("div");
       part.innerHTML = p.desc;
       part.className = "p-desc";      // classname can return the value of element. it can also be changed if needed
@@ -152,7 +152,7 @@ var cart = {
       item = document.createElement("input");
       item.type = "button";                   // it clears the cart when you click the empty button for the cart
       item.value = "Empty";
-      item.addEventListener("click", cart.nuke);
+      item.addEventListener("click", cart.cancel);
       item.className = "c-empty cart";
       cart.hItems.appendChild(item);
 
