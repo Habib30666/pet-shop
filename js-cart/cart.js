@@ -1,18 +1,17 @@
 var cart = {
-  // (A) PROPERTIES
-  hPdt : null,        // setting them a temporart variable to null
+ 
+  hPdt : null,        // setting them a temporary variable to null
   hItems : null, // HTML current cart
   items : {}, // Current items in cart
   iURL : "../images/", // Product image URL folder
 
-  // (B) LOCALSTORAGE CART
-  // (B1) SAVE CURRENT CART INTO LOCALSTORAGE
-  // https://www.youtube.com/watch?v=GihQAC1I39Q
+  //session storage
+  // saves within the session storage 
   save : function () {
     sessionStorage.setItem("cart", JSON.stringify(cart.items));
   },
 
-  // (B2) LOAD CART FROM LOCALSTORAGE
+  // this loads the cart within session storage
   load : function () {
     cart.items = sessionStorage.getItem("cart");
     if (cart.items == null) { cart.items = {}; }
@@ -28,13 +27,13 @@ var cart = {
     }
   },
 
-  // (C) INITIALIZE
+ 
   init : function () { // adds all information and repeats it when you add someting on the pets variable
-    // (C1) GET HTML ELEMENTS
+    
     cart.hPdt = document.getElementById("cart-products"); //hpdt is assagined to the elements cart products 
     cart.hItems = document.getElementById("cart-items");
 
-    // (C2) DRAW PRODUCTS LIST
+    // this is for the pets list
     cart.hPdt.innerHTML = "";
     let p, item, part; // assigning 3 variables
     for (let id in products) { // this is a for loop, it gets EACH OF THE PRODUCTS AND ASSIGN IT to THE ID
@@ -44,33 +43,33 @@ var cart = {
       item.className = "p-item";
       cart.hPdt.appendChild(item);
 
-      // PRODUCT IMAGE
+      // the pets images 
       part = document.createElement("img");
       part.src = cart.iURL + p.img;
       part.className = "p-img";
       item.appendChild(part);
 
-      // PRODUCT NAME
+      // pet names
       part = document.createElement("div");
-      part.innerHTML = p.name; // giving it a source
+      part.innerHTML = p.name; // its giving it a source
       part.className = "p-name";
       item.appendChild(part); 
 
       // PRODUCT DESCRIPTION
       part = document.createElement("div");
       part.innerHTML = p.desc;
-      part.className = "p-desc";
+      part.className = "p-desc";      // classname can return the value of element. it can also be changed if needed
       item.appendChild(part);
 
-      // PRODUCT PRICE
+      // pricing of the pets 
       part = document.createElement("div");
-      part.innerHTML = "£" + p.price;
+      part.innerHTML = "£" + p.price; // displays the £ sign on the total amount within the basket 
       part.className = "p-price";
       item.appendChild(part);
 
-      // ADD TO CART
+      // adding pets to the cart
       part = document.createElement("input");
-      part.type = "button";
+      part.type = "button";       // adds the pets you want in the cart when the button is clicked
       part.value = "Add to Cart";
       part.className = "cart p-add";
       part.onclick = cart.add;
@@ -78,16 +77,16 @@ var cart = {
       item.appendChild(part);
     }
 
-    // (C3) LOAD CART FROM PREVIOUS SESSION
-    cart.load();
+    // loads the shopping cart from the last session
+    cart.load();            
 
-    // (C4) LIST CURRENT CART ITEMS
-    cart.list(); 
+     // lists the currant cart pets 
+    cart.list();        
   },
 
-  // (D) LIST CURRENT CART ITEMS (IN HTML)
+  
   list : function () {
-    // (D1) RESET
+    
     cart.hItems.innerHTML = "";
     let item, part, pdt;  // creating 3 variables and not assagning them
     let empty = true;
@@ -95,39 +94,39 @@ var cart = {
       if(cart.items.hasOwnProperty(key)) { empty = false; break; } 
     } //if its not a product it breaks it does nothing
 
-    // (D2) CART IS EMPTY
+   // cart is empty within javascript
     if (empty) {
       item = document.createElement("div");
-      item.innerHTML = "Cart is empty";// cart is empty within javascript
+      item.innerHTML = "Cart is empty";
       cart.hItems.appendChild(item); 
     }
 
-    // (D3) CART IS NOT EMPTY - LIST ITEMS
+    
     else {
       let p, total = 0, subtotal = 0; //creating 3 variables
       for (let id in cart.items) { //looping through list of items in the cart
-        // ITEM
+        // pets
         p = products[id]; // grabs the item and creates a div
         item = document.createElement("div");
         item.className = "c-item";
         cart.hItems.appendChild(item);
 
-        // NAME
+        // loops through name of pets e.g. dog , cats, rabbits
         part = document.createElement("div");
         part.innerHTML = p.name;
-        part.className = "c-name"; // looping through each of these for the shopping cart e.g. name remove and quantity
+        part.className = "c-name"; // looping through each of these for the shopping cart e.g. name, remove and quantity
         item.appendChild(part);
 
-        // REMOVE
+        // loops through remove
         part = document.createElement("input");
         part.type = "button";
-        part.value = "X";                  // looping through each of these for the shopping cart e.g. name remove and quantity
+        part.value = "X";                  // looping through each of these for the shopping cart e.g. name, remove and quantity
         part.dataset.id = id;
         part.className = "c-del cart";
         part.addEventListener("click", cart.remove);
         item.appendChild(part);
 
-        // QUANTITY
+        // loops through quantity of pets
         part = document.createElement("input");
         part.type = "number";
         part.min = 0;
@@ -137,19 +136,19 @@ var cart = {
         part.addEventListener("change", cart.change);
         item.appendChild(part);
 
-        // SUBTOTAL
+        // adds overall totals within cart
         subtotal = cart.items[id] * p.price;
-        total += subtotal;  // adds overall totals within cart
+        total += subtotal;  
       }
 
-      // TOTAL AMOUNT
+      // the total price of pets depending on quantity
       item = document.createElement("div");  // getting each of the items and adding them into the total and displaying them
       item.className = "c-total";
       item.id = "c-total";
       item.innerHTML ="TOTAL: £" + total; 
       cart.hItems.appendChild(item);
 
-      // EMPTY BUTTONS
+      
       item = document.createElement("input");
       item.type = "button";                   // it clears the cart when you click the empty button for the cart
       item.value = "Empty";
@@ -157,9 +156,9 @@ var cart = {
       item.className = "c-empty cart";
       cart.hItems.appendChild(item);
 
-      // CHECKOUT BUTTONS
+     // the checkouts
       item = document.createElement("input");
-      item.type = "button";                   
+      item.type = "button";                   // you input a pet in the cart and click checkout 
       item.value = "Checkout";
       item.addEventListener("click", cart.checkout); 
       item.className = "c-checkout cart";
@@ -167,7 +166,7 @@ var cart = {
     }
   },
 
-  // (E) ADD ITEM INTO CART  //its how many of each products you have in the cart
+  
   add : function () {            // adds items to the cart
     if (cart.items[this.dataset.id] == undefined) {  //if 123 doesnt exist in cart it adds 1
       cart.items[this.dataset.id] = 1;// if car is  empty it adds 1 to it
@@ -178,16 +177,16 @@ var cart = {
     cart.list(); 
   },
 
-  // (F) CHANGE QUANTITY
+  // quantity
   change : function () {
-    // (F1) REMOVE ITEM
+    
     if (this.value <= 0) { //if the value is less than or equal to 0 delete item from the cart
       delete cart.items[this.dataset.id]; //delete if less than 0
       cart.save();
       cart.list();
     }
 
-    // (F2) UPDATE TOTAL ONLY
+    // updating on the total amount
     else {
       cart.items[this.dataset.id] = this.value;
       var total = 0; //creates a new total variable
@@ -198,22 +197,18 @@ var cart = {
     }
   },
 
-  // (G) REMOVE ITEM FROM CART
-  remove : function () { //ID oof your products. it gets pets into cart and  deletes it
+  //
+  remove : function () { //id of your products. it gets pets into cart and  deletes it
     delete cart.items[this.dataset.id];
     cart.save();
     cart.list();
   },
 
-  // (H) CHECKOUT
-  checkout : function () {  // displays an alert box e.g. "THANK YOU FOR YOUR PURCHHASE"
-    // SEND DATA TO SERVER
-    // CHECKS
-    // SEND AN EMAIL
-    // RECORD TO DATABASE
-    // PAYMENT
-    // WHATEVER IS REQUIRED
-    alert("THANK YOU FOR YOUR PURCHASE");   //alert
+  
+  checkout : function () {  
+    // displays an alert box e.g. "THANK YOU FOR YOUR PURCHHASE"
+
+   alert("THANK YOU FOR YOUR PURCHASE");   //alert
 
     /*
     var data = new FormData();

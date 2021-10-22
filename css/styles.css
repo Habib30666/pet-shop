@@ -7,25 +7,25 @@ h1{
 	font-size: 30px;
 }
 .navbar{
-	     background: #2d3333;
-		 display: block;
-		 width: 100%;
+	     background: #010249;/* changes the colour of the navbar   */
+		 display: block; 
+		 width: 100%;  /* changes the width size of navbar*/
 }
 .navitem {
 	width: 100%;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: rgb(255 255 255);
-    font-size: 20px;
+    font-size: 20px; /* resizes the lnks on the navbar*/
 }
 
 .banner{
 	background: url('../images/banner.jpg');
-	background-position: center;
-	background-size: cover;
+	background-position: center; /* positions the banner to center */
+	background-size: cover; /* defines the banner image seizing*/
 	background-repeat: no-repeat;
 	height: 400px;
-	width: 100%;
+	width: 100%;    /* resizes the height and width of banner */
 	position: relative;
 	margin:0;
 	padding: 0;
@@ -36,43 +36,43 @@ h1{
 }
 .main_heading{
 	position: absolute;
-	left: 50%;
+	left: 50%;  /* detirments the positioning of the name and slogan on banner */
 	top: 50%;
 	transform: translate(-50%,-50%);
-	text-align: center;
+	text-align: center; /* positions the text in the middle*/
 }
 .main_heading h1{
-	font-size: 56px;
-	font-weight: bold;
-    color: #fff;
+	font-size: 56px; /* re-seizes website name*/
+	font-weight: bold; /* changes the colour of website name on banner  */
+    color: rgb(127, 19, 250);
 }
 .main_heading p{
-	font-size: 30px;
-	font-weight: bold;
-    color: #fff;
+	font-size: 30px; /* re-seizes slogan */
+	font-weight: bold;  /* changes the slogan colour*/
+    color: rgb(255, 255, 255);
 }
 .dogs{
-	margin-top: 100px;
+	margin-top: 100px; /* expands the seizing of the margain with the home image and about us section*/
 }
 .pets-row{
-	margin-top: 100px;
+	margin-top: 100px; /* expands the margin on the the "Avaliable pets" page and the image positioning*/
 }
 .pets-row img{
-	height: 240px;
+	height: 290px;  /* re-seizes the images on the "avaliable pets" page */
 	transition: 0.3s;
 
 }
 .contact h1{
-	margin-top: 100px;
+	margin-top: 100px; 
 }
 .contact .form-control{
 	margin-bottom: 20px;
-	border: 1px solid #000;
+	border: 1px solid rgb(197, 25, 25);
 }
 footer{
-	padding: 20px;
+	padding: 20px;  /* changes the size of the footer*/
 	display: inline-block; 
-	color: white;
-	text-align: center;
+	color: rgb(243, 235, 235); /* changes the colour of the text displayed on footer*/
+	text-align: center; /* positions text in the middle */
 	width: 100%;
 }
